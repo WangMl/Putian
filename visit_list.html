@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="menu">
+    <li>
+        北京美通云动科技有限公司
+    </li>
+    <li>
+        北京三块在线科技有限公司
+    </li>
+    <li>
+        广州汽车集团股份有限公司
+    </li>
+    <li>
+        北京三块在线科技有限公司
+    </li>
+    <li>
+        北京美通云动科技有限公司
+    </li>
+    <li>
+        北京三块在线科技有限公司
+    </li>
+    <li>
+        广州汽车集团股份有限公司
+    </li>
+    <li>
+        北京三块在线科技有限公司
+    </li>
+</ul>
+<script>
+    var menuList = document.getElementById("menu");
+    menuList.addEventListener('click',function(e){
+        var target = e.target;
+        if(target.tagName.toLowerCase() === "li"){
+             var aElement = document.createElement("a");
+             var hash = window.location.hash;
+             if(hash && hash.indexOf("createVisit") != -1){
+                 aElement.href = "visit_map.html";
+             }else{
+                 aElement.href = "visit_info.html";
+             }
+             aElement.click();
+        }
+    })
+</script>
+</body>
+</html>
